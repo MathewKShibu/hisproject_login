@@ -21,7 +21,7 @@ public interface LoginMapper {
 			+"(#{loginDetails.login_id},#{loginDetails.username},#{loginDetails.password})")
 	void insertLoginDetails(@Param("loginDetails") LoginDetails loginDetails);
 
-	@Select("select * from flightlogin where username=#{username}")
+	@Select("select * from flight_login where username=#{username}")
 	List<LoginDetails> checkLoginDetails(@Param("username") String username);
 
 }
